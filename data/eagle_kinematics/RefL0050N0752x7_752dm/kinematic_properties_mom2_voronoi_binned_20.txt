@@ -1,0 +1,5 @@
+Voronoi-binned kinematic summaries of RefL0050N0752x7_752dm galaxies from snap 28 using SimSpin 2.9.0 on date: 2024-07-29
+/ batch no: 
+20
+-------------------------------------------------------------------------------------------------
+'GalaxyID','vorbin_number','lambda_re','vsigma','j','sigma_m','rotational_velocity','unique_pixels'
