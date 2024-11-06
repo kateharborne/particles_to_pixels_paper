@@ -3,7 +3,7 @@
 # Plotting the results of bootstrapping: 
 # Generating the plots that show the bootstrap results in comparison with the
 # resolution models. 
-# This script produces Figures 3 and 4 in the manuscript.
+# This script produces Figures 3 and 4 in the manuscript, and Fig A1.
 # ============================================================================ #
 
 library(SimSpin)
