@@ -3,20 +3,21 @@
 # Making images: 
 # Making some pretty plots of the galaxies and their kinematic maps. Also, some
 # visualisations of the observations following voronoi binning.
+# Figure 3 in the paper. 
 # ============================================================================ #
 
 library(SimSpin)
 library(magicaxis)
 
 # PATHS ========================================================================
-ss_loc = "project_resolution/particles_to_pixels_paper/simspin_files/sm650/"
-sa_loc = "project_resolution/particles_to_pixels_paper/data/sim_analysis/sm650/"
-plot_loc = "project_resolution/particles_to_pixels_paper/plots/"
-data_loc = "project_resolution/particles_to_pixels_paper/data/"
+ss_loc = "simspin_files/"
+sa_loc = "sim_analysis/"
+plot_loc = "plots/"
+data_loc = "data/"
 cube_loc = paste0(data_loc, "/cubes/flux_obs/")
 
-source("project_resolution/particles_to_pixels_paper/functions/plot_images.R")
-source("plot_array.R")
+source("functions/plot_images.R")
+source("functions/plot_array.R")
 
 # Loading data =================================================================
 
