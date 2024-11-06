@@ -3,6 +3,7 @@
 # Given the shot noise, how does the spin parameter and other measured 
 # kinematics vary due to the effects of shot noise? And how do these then
 # change if we using voronoi bins?
+# Making figures 7 and 8
 # ============================================================================ #
 
 library(SimSpin)
@@ -72,7 +73,7 @@ bulge_control_ifu =
                  observing_strategy = sky_00,
                  method = "velocity",
                  mass_flag = F, moments = 2)
-saveRDS(bulge_control_ifu, paste0(cube_loc, "mom2/bulge_sm650_control_ifu_obs.Rdata"))
+saveRDS(bulge_control_ifu, paste0(cube_loc, "bulge_sm650_control_ifu_obs.Rdata"))
 
 bulge_control_ifu = readRDS(paste0(cube_loc, "bulge_sm650_control_ifu_obs.Rdata"))
 bulge_mask = bulge_control_ifu$raw_images$particle_image
@@ -105,7 +106,7 @@ bulge_p100_ifu =
                  observing_strategy = sky_00,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(bulge_p100_ifu, paste0(cube_loc, "mom2/bulge_sm650_p100_ifu_obs.Rdata"))
+saveRDS(bulge_p100_ifu, paste0(cube_loc, "bulge_sm650_p100_ifu_obs.Rdata"))
 
 bulge_p100_kin = get_kinematic_properties(
   ifu_output = bulge_p100_ifu,
@@ -121,7 +122,7 @@ bulge_p84_ifu =
                  observing_strategy = sky_00,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(bulge_p84_ifu, paste0(cube_loc, "mom2/bulge_sm650_p84_ifu_obs.Rdata"))
+saveRDS(bulge_p84_ifu, paste0(cube_loc, "bulge_sm650_p84_ifu_obs.Rdata"))
 
 bulge_p84_kin = get_kinematic_properties(
   ifu_output = bulge_p84_ifu,
@@ -138,7 +139,7 @@ bulge_p50_ifu =
                  observing_strategy = sky_00,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(bulge_p50_ifu, paste0(cube_loc, "mom2/bulge_sm650_p50_ifu_obs.Rdata"))
+saveRDS(bulge_p50_ifu, paste0(cube_loc, "bulge_sm650_p50_ifu_obs.Rdata"))
 
 bulge_p50_kin = get_kinematic_properties(
   ifu_output = bulge_p50_ifu,
@@ -154,7 +155,7 @@ bulge_p16_ifu =
                  observing_strategy = sky_00,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(bulge_p16_ifu, paste0(cube_loc, "mom2/bulge_sm650_p16_ifu_obs.Rdata"))
+saveRDS(bulge_p16_ifu, paste0(cube_loc, "bulge_sm650_p16_ifu_obs.Rdata"))
 
 bulge_p16_kin = get_kinematic_properties(
   ifu_output = bulge_p16_ifu,
@@ -170,7 +171,7 @@ bulge_p0_ifu =
                  observing_strategy = sky_00,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(bulge_p0_ifu, paste0(cube_loc, "mom2/bulge_sm650_p0_ifu_obs.Rdata"))
+saveRDS(bulge_p0_ifu, paste0(cube_loc, "bulge_sm650_p0_ifu_obs.Rdata"))
 
 bulge_p0_kin = get_kinematic_properties(
   ifu_output = bulge_p0_ifu,
@@ -216,7 +217,7 @@ disk_control_ifu =
                  observing_strategy = sky_90,
                  method = "velocity", 
                  mass_flag = F, cores = 3, moments = 2)
-saveRDS(disk_control_ifu, paste0(cube_loc, "mom2/disk_sm650_control_ifu_obs.Rdata"))
+saveRDS(disk_control_ifu, paste0(cube_loc, "disk_sm650_control_ifu_obs.Rdata"))
 
 disk_photometry = readRDS(paste0(data_loc, "disk_sm650_control_photo_values.Rdata"))
 disk_mask = disk_control_ifu$raw_images$particle_image
@@ -248,7 +249,7 @@ disk_p100_ifu =
                  observing_strategy = sky_90,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(disk_p100_ifu, paste0(cube_loc, "mom2/disk_sm650_p100_ifu_obs.Rdata"))
+saveRDS(disk_p100_ifu, paste0(cube_loc, "disk_sm650_p100_ifu_obs.Rdata"))
 
 disk_p100_kin = get_kinematic_properties(
   ifu_output = disk_p100_ifu,
@@ -264,7 +265,7 @@ disk_p84_ifu =
                  observing_strategy = sky_90,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(disk_p84_ifu, paste0(cube_loc, "mom2/disk_sm650_p84_ifu_obs.Rdata"))
+saveRDS(disk_p84_ifu, paste0(cube_loc, "disk_sm650_p84_ifu_obs.Rdata"))
 
 disk_p84_kin = get_kinematic_properties(
   ifu_output = disk_p84_ifu,
@@ -281,7 +282,7 @@ disk_p50_ifu =
                  observing_strategy = sky_90,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(disk_p50_ifu, paste0(cube_loc, "mom2/disk_sm650_p50_ifu_obs.Rdata"))
+saveRDS(disk_p50_ifu, paste0(cube_loc, "disk_sm650_p50_ifu_obs.Rdata"))
 
 disk_p50_kin = get_kinematic_properties(
   ifu_output = disk_p50_ifu,
@@ -297,7 +298,7 @@ disk_p16_ifu =
                  observing_strategy = sky_90,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(disk_p16_ifu, paste0(cube_loc, "mom2/disk_sm650_p16_ifu_obs.Rdata"))
+saveRDS(disk_p16_ifu, paste0(cube_loc, "disk_sm650_p16_ifu_obs.Rdata"))
 
 disk_p16_kin = get_kinematic_properties(
   ifu_output = disk_p16_ifu,
@@ -313,7 +314,7 @@ disk_p0_ifu =
                  observing_strategy = sky_90,
                  method = "velocity", 
                  mass_flag = F, moments = 2)
-saveRDS(disk_p0_ifu, paste0(cube_loc, "mom2/disk_sm650_p0_ifu_obs.Rdata"))
+saveRDS(disk_p0_ifu, paste0(cube_loc, "disk_sm650_p0_ifu_obs.Rdata"))
 
 disk_p0_kin = get_kinematic_properties(
   ifu_output = disk_p0_ifu,
@@ -342,7 +343,7 @@ for(p in part_res){
     )
     
     saveRDS(get(paste0("bulge_p", p,"_ifu_v", each)), 
-            paste0(cube_loc, "mom2/bulge_sm650_p", p,"_ifu_obs_vorbin_", each,".Rdata"))
+            paste0(cube_loc, "bulge_sm650_p", p,"_ifu_obs_vorbin_", each,".Rdata"))
     
     assign(paste0("bulge_p", p,"_kin_v", each),
            get_kinematic_properties(
@@ -366,7 +367,7 @@ for(p in part_res){
     )
     
     saveRDS(get(paste0("disk_p", p,"_ifu_v", each)),
-            paste0(cube_loc, "mom2/disk_sm650_p", p,"_ifu_obs_vorbin_", each,".Rdata"))
+            paste0(cube_loc, "disk_sm650_p", p,"_ifu_obs_vorbin_", each,".Rdata"))
     
     assign(paste0("disk_p", p,"_kin_v", each),
            get_kinematic_properties(
@@ -542,15 +543,15 @@ tol_pal = c("#332288", "#117733", "#44AA99", "#88CCEE",
             "#DDCC77", "#CC6677", "#AA4499", "#882255")
 
 part_seq = c(10, seq(50,500,by=50))
-source("project_resolution/particles_to_pixels_paper/functions/plot_images.R")
+source("functions/plot_images.R")
 
 # Visualising the binning process ----------------------------------------------
 w = plot_array(0.36, 4)
 
-bulge_000 = readRDS(paste0(cube_loc, "mom2/bulge_sm650_p0_ifu_obs.Rdata"))
-bulge_100 = readRDS(paste0(cube_loc, "mom2/bulge_sm650_p0_ifu_obs_vorbin_100.Rdata"))
-bulge_200 = readRDS(paste0(cube_loc, "mom2/bulge_sm650_p0_ifu_obs_vorbin_200.Rdata"))
-bulge_300 = readRDS(paste0(cube_loc, "mom2/bulge_sm650_p0_ifu_obs_vorbin_300.Rdata"))
+bulge_000 = readRDS(paste0(cube_loc, "bulge_sm650_p0_ifu_obs.Rdata"))
+bulge_100 = readRDS(paste0(cube_loc, "bulge_sm650_p0_ifu_obs_vorbin_100.Rdata"))
+bulge_200 = readRDS(paste0(cube_loc, "bulge_sm650_p0_ifu_obs_vorbin_200.Rdata"))
+bulge_300 = readRDS(paste0(cube_loc, "bulge_sm650_p0_ifu_obs_vorbin_300.Rdata"))
 
 bulge_photometry = readRDS(paste0(data_loc, "bulge_sm650_control_photo_values_500.Rdata"))
 ap_mask = matrix(data = bulge_000$observation$aperture_region, ncol = bulge_000$observation$sbin, nrow = bulge_000$observation$sbin)
@@ -776,16 +777,16 @@ abline(h = 200, col = "grey48", lwd=2)
 dev.off()
 
 # Examining the LOSVD of pixels in increasing vorbin pixels --------------------
-unbinned_output = readRDS("project_resolution/particles_to_pixels_paper/data/cubes/flux_obs/bulge_sm650_control_ifu_obs.Rdata")
+unbinned_output = readRDS("data/cubes/flux_obs/bulge_sm650_control_ifu_obs.Rdata")
 unbinned_output$velocity_cube = unbinned_output$velocity_cube[,,11:120]
 unbinned_output$observation$vbin_seq = unbinned_output$observation$vbin_seq[11:120]
 
-vbinned_output_200 = readRDS("project_resolution/particles_to_pixels_paper/data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_200.Rdata")
-vbinned_output_300 = readRDS("project_resolution/particles_to_pixels_paper/data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_300.Rdata")
-vbinned_output_400 = readRDS("project_resolution/particles_to_pixels_paper/data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_400.Rdata")
-vbinned_output_500 = readRDS("project_resolution/particles_to_pixels_paper/data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_500.Rdata")
+vbinned_output_200 = readRDS("data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_200.Rdata")
+vbinned_output_300 = readRDS("data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_300.Rdata")
+vbinned_output_400 = readRDS("data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_400.Rdata")
+vbinned_output_500 = readRDS("data/cubes/flux_obs/bulge_sm650_p0_ifu_obs_vorbin_500.Rdata")
 
-unbinned_output_p0 = readRDS("project_resolution/particles_to_pixels_paper/data/cubes/flux_obs/bulge_sm650_p0_ifu_obs.Rdata")
+unbinned_output_p0 = readRDS("data/cubes/flux_obs/bulge_sm650_p0_ifu_obs.Rdata")
 
 tol_pal = c("#332288", "#117733", "#44AA99", "#88CCEE", 
             "#DDCC77", "#CC6677", "#AA4499", "#882255")
